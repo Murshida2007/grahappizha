@@ -1,0 +1,1935 @@
+/* =========================================================
+   FOUR.CSS
+   SHIBU SWAMI JYOTHISHAM
+   HOROSCOPE RESULT PAGE
+========================================================= */
+
+
+/* =========================================================
+   ROOT VARIABLES
+========================================================= */
+
+:root {
+
+    --gold: #e8bd4f;
+    --gold-light: #ffe28a;
+    --gold-dark: #9b6815;
+
+    --brown-dark: #160604;
+    --brown: #2b0c06;
+
+    --paper: #ead09a;
+    --paper-light: #f5dfae;
+
+    --red: #7b0e08;
+
+    --text-dark: #5a160d;
+
+    --font-ml: "Noto Sans Malayalam", sans-serif;
+    --font-baloo: "Baloo Bhai 2", sans-serif;
+
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+
+    color: var(--gold-light);
+
+    font-family: var(--font-ml);
+
+    background:
+
+        radial-gradient(
+            circle at 50% 8%,
+            rgba(170, 88, 18, .35),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            180deg,
+            #120402,
+            #2c0c05 50%,
+            #100302
+        );
+
+}
+
+
+/* =========================================================
+   BACKGROUND GLOW
+========================================================= */
+
+.background-glow {
+
+    position: fixed;
+
+    width: 320px;
+    height: 320px;
+
+    border-radius: 50%;
+
+    filter: blur(80px);
+
+    opacity: .2;
+
+    pointer-events: none;
+
+    z-index: 0;
+
+}
+
+
+.glow-one {
+
+    left: -130px;
+
+    top: 5%;
+
+    background: #a95512;
+
+}
+
+
+.glow-two {
+
+    right: -140px;
+
+    top: 45%;
+
+    background: #d27a19;
+
+}
+
+
+/* =========================================================
+   RESULT PAGE
+========================================================= */
+
+.result-page {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: min(760px, 94vw);
+
+    margin: 24px auto;
+
+    padding: 25px 28px 50px;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            rgba(63, 18, 7, .98),
+            rgba(32, 7, 4, .98)
+        );
+
+    border: 1px solid rgba(232, 189, 79, .55);
+
+    border-radius: 8px;
+
+    box-shadow:
+
+        0 12px 35px rgba(0, 0, 0, .65),
+
+        inset 0 0 35px rgba(0, 0, 0, .3);
+
+    overflow: hidden;
+
+}
+
+
+/* =========================================================
+   TOP DECORATION
+========================================================= */
+
+.top-rods {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-bottom: 3px;
+
+}
+
+
+.top-rod {
+
+    width: 115px;
+
+    height: 3px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--gold),
+            transparent
+        );
+
+}
+
+
+.top-star {
+
+    color: var(--gold-light);
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================================
+   SWAMI SECTION
+========================================================= */
+
+.swami-section {
+
+    position: relative;
+
+    height: 245px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+/* =========================================================
+   ZODIAC CHART
+========================================================= */
+
+.zodiac-chart {
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 220px;
+    height: 220px;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    opacity: .72;
+
+    z-index: 1;
+
+    filter:
+
+        drop-shadow(
+            0 0 15px rgba(232, 189, 79, .6)
+        );
+
+}
+
+
+.chart-image {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    border-radius: 50%;
+
+}
+
+
+/* =========================================================
+   SWAMI GLOW
+========================================================= */
+
+.swami-glow {
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 170px;
+    height: 170px;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(255, 226, 138, .5),
+            transparent 70%
+        );
+
+    filter: blur(8px);
+
+    z-index: 2;
+
+}
+
+
+/* =========================================================
+   SWAMI ROUND PHOTO
+========================================================= */
+
+.swami-round {
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 4;
+
+    width: 165px;
+    height: 165px;
+
+    padding: 6px;
+
+    border-radius: 50%;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #fff0a0,
+            #b47b19,
+            #ffe27b,
+            #8d5a11
+        );
+
+    box-shadow:
+
+        0 0 0 2px rgba(255, 226, 138, .65),
+
+        0 0 22px rgba(232, 189, 79, .6);
+
+}
+
+
+.swami-round-inner {
+
+    width: 100%;
+    height: 100%;
+
+    padding: 3px;
+
+    border-radius: 50%;
+
+    background: #321005;
+
+    overflow: hidden;
+
+}
+
+
+.swami-image {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    border-radius: 50%;
+
+}
+
+
+/* =========================================================
+   BRAND TITLE
+========================================================= */
+
+.brand-title {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: -4px;
+
+}
+
+
+.title-decoration {
+
+    width: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 4px;
+
+}
+
+
+.title-decoration span {
+
+    flex: 1;
+
+    height: 2px;
+
+    background: var(--gold);
+
+}
+
+
+.title-decoration span:nth-child(2) {
+
+    flex: 0 0 8px;
+
+    width: 8px;
+    height: 8px;
+
+    transform: rotate(45deg);
+
+    border: 1px solid var(--gold);
+
+    background: transparent;
+
+}
+
+
+.title-box {
+
+    padding: 7px 24px 9px;
+
+    border: 1px solid var(--gold);
+
+    border-radius: 10px;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            #6b1b0c,
+            #350a05
+        );
+
+    box-shadow:
+
+        0 0 12px rgba(232, 189, 79, .25);
+
+}
+
+
+.title-box h1 {
+
+    color: #ffe58b;
+
+    font-size: clamp(21px, 4vw, 30px);
+
+    font-weight: 800;
+
+    line-height: 1.15;
+
+    text-align: center;
+
+}
+
+
+/* =========================================================
+   PERSONAL INFORMATION SECTION
+========================================================= */
+
+.personal-section {
+
+    margin-top: 20px;
+
+    padding: 17px 19px;
+
+    color: var(--text-dark);
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #f0d59f,
+            #d5b16d
+        );
+
+    border: 1px solid rgba(255, 224, 130, .7);
+
+    border-radius: 7px;
+
+    box-shadow:
+
+        0 5px 16px rgba(0, 0, 0, .35);
+
+}
+
+
+.section-heading {
+
+    margin-bottom: 10px;
+
+    color: #71180d;
+
+    font-size: 22px;
+
+    font-weight: 800;
+
+}
+
+
+.personal-content {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+}
+
+
+.personal-details {
+
+    flex: 1;
+
+    min-width: 0;
+
+}
+
+
+.detail-row {
+
+    display: grid;
+
+    grid-template-columns: 105px 15px 1fr;
+
+    align-items: center;
+
+    min-height: 29px;
+
+    color: #57150d;
+
+    font-size: 15px;
+
+}
+
+
+.detail-label {
+
+    font-weight: 600;
+
+}
+
+
+.colon {
+
+    text-align: center;
+
+    font-weight: 800;
+
+}
+
+
+.detail-row strong {
+
+    font-weight: 800;
+
+    overflow-wrap: anywhere;
+
+}
+
+
+/* =========================================================
+   PROFILE PHOTO
+========================================================= */
+
+.profile-wrapper {
+
+    flex: 0 0 auto;
+
+}
+
+
+.profile-ring {
+
+    width: 105px;
+    height: 105px;
+
+    padding: 5px;
+
+    border-radius: 50%;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #fff0a0,
+            #ae7417,
+            #ffe27b,
+            #865511
+        );
+
+    box-shadow:
+
+        0 0 0 2px rgba(104, 50, 8, .3),
+
+        0 0 13px rgba(139, 87, 13, .4);
+
+}
+
+
+.profile-ring img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    display: block;
+
+}
+
+
+/* =========================================================
+   ORNAMENTAL DIVIDER
+========================================================= */
+
+.ornamental-divider {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin: 20px 0 13px;
+
+}
+
+
+.ornamental-divider span {
+
+    flex: 1;
+
+    height: 1px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--gold)
+        );
+
+}
+
+
+.ornamental-divider span:last-child {
+
+    background:
+
+        linear-gradient(
+            90deg,
+            var(--gold),
+            transparent
+        );
+
+}
+
+
+.ornamental-divider b {
+
+    color: var(--gold-light);
+
+    font-size: 15px;
+
+}
+
+
+/* =========================================================
+   PREDICTION TITLE
+========================================================= */
+
+.prediction-title {
+
+    text-align: center;
+
+    margin-bottom: 12px;
+
+}
+
+
+.prediction-title h2 {
+
+    display: inline-block;
+
+    padding: 6px 18px 8px;
+
+    color: #ffe291;
+
+    font-size: 19px;
+
+    font-weight: 800;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            #651b0d,
+            #380b06
+        );
+
+    border: 1px solid #b17a20;
+
+    border-radius: 10px;
+
+}
+
+
+/* =========================================================
+   PREDICTION LIST
+========================================================= */
+
+.prediction-list {
+
+    overflow: hidden;
+
+    border: 1px solid rgba(239, 191, 71, .55);
+
+    border-radius: 6px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #ead09a,
+            #d5b16d
+        );
+
+}
+
+
+/* =========================================================
+   PREDICTION ROW
+========================================================= */
+
+.prediction-row {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 13px;
+
+    padding: 15px 17px;
+
+    color: var(--text-dark);
+
+    border-bottom:
+
+        1px solid rgba(104, 49, 11, .35);
+
+}
+
+
+.prediction-row:last-child {
+
+    border-bottom: none;
+
+}
+
+
+/* =========================================================
+   PREDICTION ICON
+========================================================= */
+
+.prediction-icon {
+
+    flex: 0 0 43px;
+
+    width: 43px;
+    height: 43px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            #771b0c,
+            #3a0905
+        );
+
+    border: 1px solid #c8912d;
+
+}
+
+
+.prediction-icon span {
+
+    color: #ffe18b;
+
+    font-size: 20px;
+
+}
+
+
+/* =========================================================
+   PREDICTION CONTENT
+========================================================= */
+
+.prediction-content {
+
+    flex: 1;
+
+    min-width: 0;
+
+}
+
+
+.prediction-content h3 {
+
+    margin-bottom: 1px;
+
+    color: #71180d;
+
+    font-size: 18px;
+
+    font-weight: 800;
+
+}
+
+
+.prediction-content p {
+
+    color: #5c1b10;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    font-weight: 500;
+
+    overflow-wrap: anywhere;
+
+}
+
+
+/* =========================================================
+   OFFICIAL SEAL
+========================================================= */
+
+.official-seal {
+
+    position: absolute;
+
+    right: 20px;
+
+    bottom: 45px;
+
+    width: 90px;
+    height: 90px;
+
+    transform: rotate(-7deg);
+
+    z-index: 10;
+
+    pointer-events: none;
+
+}
+
+
+.official-seal img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+
+}
+
+
+/* =========================================================
+   BOTTOM DECORATION
+========================================================= */
+
+.bottom-decoration {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    width: 170px;
+
+    margin: 28px auto 0;
+
+}
+
+
+.bottom-decoration span {
+
+    flex: 1;
+
+    height: 1px;
+
+    background: var(--gold);
+
+}
+
+
+.bottom-decoration b {
+
+    color: var(--gold);
+
+}
+
+
+/* =========================================================
+   ACTION BUTTON AREA
+========================================================= */
+
+.download-area {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 25px;
+
+}
+
+
+/* =========================================================
+   DOWNLOAD BUTTON
+========================================================= */
+
+.download-btn {
+
+    border: 1px solid var(--gold);
+
+    border-radius: 10px;
+
+    padding: 10px 20px;
+
+    color: #fff0b0;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            #741c0d,
+            #3b0b06
+        );
+
+    font-family: var(--font-ml);
+
+    font-size: 16px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    box-shadow:
+
+        0 4px 12px rgba(0, 0, 0, .35);
+
+    transition:
+
+        transform .2s ease,
+
+        box-shadow .2s ease,
+
+        background .2s ease;
+
+}
+
+
+.download-btn:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+
+        0 6px 17px rgba(0, 0, 0, .5);
+
+}
+
+
+.download-btn:active {
+
+    transform: translateY(0);
+
+}
+
+
+.download-btn:focus-visible {
+
+    outline: 2px solid var(--gold-light);
+
+    outline-offset: 3px;
+
+}
+
+
+/* =========================================================
+   TRY AGAIN BUTTON
+========================================================= */
+
+.try-again-btn {
+
+    border: 1px solid rgba(232, 189, 79, .85);
+
+    border-radius: 10px;
+
+    padding: 9px 25px;
+
+    color: #ffe7a0;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            #4f1209,
+            #260704
+        );
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+
+        0 4px 12px rgba(0, 0, 0, .3);
+
+    transition:
+
+        transform .2s ease,
+
+        box-shadow .2s ease,
+
+        background .2s ease,
+
+        opacity .2s ease;
+
+}
+
+
+.try-again-btn:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+
+        0 6px 16px rgba(0, 0, 0, .45);
+
+    background:
+
+        linear-gradient(
+            180deg,
+            #65170b,
+            #310805
+        );
+
+}
+
+
+.try-again-btn:active {
+
+    transform: translateY(0);
+
+}
+
+
+.try-again-btn:focus-visible {
+
+    outline: 2px solid var(--gold-light);
+
+    outline-offset: 3px;
+
+}
+
+
+/* =========================================================
+   TRY AGAIN AUDIO PLAYING STATE
+========================================================= */
+
+.try-again-btn:disabled {
+
+    opacity: .6;
+
+    cursor: not-allowed;
+
+    transform: none;
+
+    box-shadow:
+
+        0 3px 8px rgba(0, 0, 0, .25);
+
+}
+
+
+.try-again-btn:disabled:hover {
+
+    transform: none;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            #4f1209,
+            #260704
+        );
+
+}
+
+
+/* =========================================================
+   HANGING LAMPS
+========================================================= */
+
+.hanging-lamp {
+
+    position: fixed;
+
+    top: 0;
+
+    width: 75px;
+    height: 140px;
+
+    z-index: 1;
+
+    pointer-events: none;
+
+}
+
+
+.lamp-left {
+
+    left: 5px;
+
+}
+
+
+.lamp-right {
+
+    right: 5px;
+
+}
+
+
+.lamp-chain {
+
+    position: absolute;
+
+    left: 50%;
+    top: 0;
+
+    width: 3px;
+    height: 65px;
+
+    transform: translateX(-50%);
+
+    background:
+
+        repeating-linear-gradient(
+            180deg,
+            #dcae40 0 6px,
+            #79500d 6px 10px
+        );
+
+}
+
+
+.lamp-hook {
+
+    position: absolute;
+
+    left: 50%;
+    top: 59px;
+
+    width: 22px;
+    height: 17px;
+
+    transform: translateX(-50%);
+
+    border:
+
+        3px solid #c9962d;
+
+    border-bottom: none;
+
+    border-radius: 20px 20px 0 0;
+
+}
+
+
+.lamp-body {
+
+    position: absolute;
+
+    top: 72px;
+    left: 50%;
+
+    width: 55px;
+    height: 55px;
+
+    transform: translateX(-50%);
+
+}
+
+
+.lamp-flame {
+
+    position: absolute;
+
+    left: 50%;
+    top: -13px;
+
+    width: 10px;
+    height: 18px;
+
+    transform:
+
+        translateX(-50%)
+        rotate(45deg);
+
+    border-radius: 60% 40% 60% 40%;
+
+    background: #ffd86a;
+
+    box-shadow:
+
+        0 0 12px #ffbd28;
+
+}
+
+
+.lamp-top {
+
+    position: absolute;
+
+    left: 50%;
+    top: 0;
+
+    width: 34px;
+    height: 7px;
+
+    transform: translateX(-50%);
+
+    background: #e2b54e;
+
+    border-radius: 50%;
+
+}
+
+
+.lamp-bowl {
+
+    position: absolute;
+
+    left: 50%;
+    top: 5px;
+
+    width: 54px;
+    height: 17px;
+
+    transform: translateX(-50%);
+
+    background:
+
+        linear-gradient(
+            #f1c75e,
+            #9b6514
+        );
+
+    border-radius: 0 0 50% 50%;
+
+}
+
+
+.lamp-base {
+
+    position: absolute;
+
+    left: 50%;
+    top: 21px;
+
+    width: 9px;
+    height: 27px;
+
+    transform: translateX(-50%);
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #83520c,
+            #e5b84d,
+            #8b5a11
+        );
+
+    border-radius: 4px;
+
+}
+
+
+/* =========================================================
+   TABLET RESPONSIVE
+========================================================= */
+
+@media (max-width: 650px) {
+
+
+    .result-page {
+
+        width: 95vw;
+
+        margin: 12px auto;
+
+        padding:
+
+            20px
+            15px
+            45px;
+
+    }
+
+
+    .swami-section {
+
+        height: 220px;
+
+    }
+
+
+    .zodiac-chart {
+
+        width: 195px;
+        height: 195px;
+
+    }
+
+
+    .swami-round {
+
+        width: 145px;
+        height: 145px;
+
+        left: 50%;
+        top: 50%;
+
+        transform: translate(-50%, -50%);
+
+    }
+
+
+    .title-decoration {
+
+        width: 35px;
+
+    }
+
+
+    .personal-section {
+
+        padding: 14px;
+
+    }
+
+
+    .detail-row {
+
+        grid-template-columns:
+
+            90px
+            13px
+            1fr;
+
+        font-size: 14px;
+
+    }
+
+
+    .profile-ring {
+
+        width: 90px;
+        height: 90px;
+
+    }
+
+
+    /* SEAL */
+
+    .official-seal {
+
+        width: 75px;
+        height: 75px;
+
+        right: 15px;
+
+        bottom: 120px;
+
+        transform: rotate(-7deg);
+
+    }
+
+
+    .official-seal img {
+
+        width: 100%;
+        height: 100%;
+
+    }
+
+
+    .hanging-lamp {
+
+        opacity: .45;
+
+    }
+
+
+}
+
+
+/* =========================================================
+   MOBILE RESPONSIVE
+========================================================= */
+
+@media (max-width: 480px) {
+
+
+    .result-page {
+
+        width: 94vw;
+
+        margin: 10px auto;
+
+        padding:
+
+            17px
+            10px
+            42px;
+
+    }
+
+
+    .top-rod {
+
+        width: 70px;
+
+    }
+
+
+    .swami-section {
+
+        height: 190px;
+
+    }
+
+
+    .zodiac-chart {
+
+        width: 160px;
+        height: 160px;
+
+    }
+
+
+    .swami-round {
+
+        width: 125px;
+        height: 125px;
+
+        left: 50%;
+        top: 50%;
+
+        transform: translate(-50%, -50%);
+
+    }
+
+
+    .brand-title {
+
+        gap: 5px;
+
+    }
+
+
+    .title-decoration {
+
+        width: 20px;
+
+    }
+
+
+    .title-box {
+
+        padding:
+
+            6px
+            15px
+            7px;
+
+    }
+
+
+    .title-box h1 {
+
+        font-size: 19px;
+
+    }
+
+
+    .personal-content {
+
+        flex-direction: column-reverse;
+
+        align-items: stretch;
+
+    }
+
+
+    .profile-wrapper {
+
+        display: flex;
+
+        justify-content: center;
+
+        margin-bottom: 5px;
+
+    }
+
+
+    .profile-ring {
+
+        width: 95px;
+        height: 95px;
+
+    }
+
+
+    .section-heading {
+
+        font-size: 20px;
+
+    }
+
+
+    .detail-row {
+
+        grid-template-columns:
+
+            85px
+            12px
+            1fr;
+
+        min-height: 28px;
+
+        font-size: 13px;
+
+    }
+
+
+    .prediction-title h2 {
+
+        width: 100%;
+
+        font-size: 17px;
+
+        padding:
+
+            6px
+            8px
+            7px;
+
+    }
+
+
+    .prediction-row {
+
+        gap: 10px;
+
+        padding:
+
+            12px
+            10px;
+
+    }
+
+
+    .prediction-icon {
+
+        flex-basis: 38px;
+
+        width: 38px;
+        height: 38px;
+
+    }
+
+
+    .prediction-icon span {
+
+        font-size: 18px;
+
+    }
+
+
+    .prediction-content h3 {
+
+        font-size: 17px;
+
+    }
+
+
+    .prediction-content p {
+
+        font-size: 13px;
+
+        line-height: 1.45;
+
+    }
+
+
+    /* MOBILE SEAL */
+
+    .official-seal {
+
+        width: 65px;
+        height: 65px;
+
+        right: 8px;
+
+        bottom: 80px;
+
+        transform: rotate(-7deg);
+
+    }
+
+
+    .official-seal img {
+
+        width: 100%;
+        height: 100%;
+
+    }
+
+
+    .download-area {
+
+        width: 100%;
+
+        gap: 9px;
+
+    }
+
+
+    .download-btn,
+    .try-again-btn {
+
+        width: 100%;
+
+        font-size: 14px;
+
+        padding: 9px 10px;
+
+    }
+
+
+    .hanging-lamp {
+
+        display: none;
+
+    }
+
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE DEVICES
+========================================================= */
+
+@media (max-width: 360px) {
+
+
+    .result-page {
+
+        width: 96vw;
+
+        padding-left: 8px;
+        padding-right: 8px;
+
+    }
+
+
+    .title-box {
+
+        padding-left: 10px;
+        padding-right: 10px;
+
+    }
+
+
+    .title-box h1 {
+
+        font-size: 17px;
+
+    }
+
+
+    .detail-row {
+
+        grid-template-columns:
+
+            78px
+            10px
+            1fr;
+
+        font-size: 12px;
+
+    }
+
+
+    .prediction-row {
+
+        gap: 8px;
+
+        padding:
+
+            11px
+            8px;
+
+    }
+
+
+    .prediction-icon {
+
+        flex-basis: 35px;
+
+        width: 35px;
+        height: 35px;
+
+    }
+
+
+    .prediction-content h3 {
+
+        font-size: 16px;
+
+    }
+
+
+    .prediction-content p {
+
+        font-size: 12px;
+
+    }
+
+
+    .official-seal {
+
+        width: 58px;
+        height: 58px;
+
+        right: 6px;
+
+        bottom: 78px;
+
+    }
+
+
+}
+
+
+/* =========================================================
+   PRINT / PDF
+========================================================= */
+
+@media print {
+
+
+    @page {
+
+        size: A4;
+
+        margin: 8mm;
+
+    }
+
+
+    html,
+    body {
+
+        background: white !important;
+
+        margin: 0;
+
+        padding: 0;
+
+    }
+
+
+    .background-glow,
+    .hanging-lamp,
+    .download-area {
+
+        display: none !important;
+
+    }
+
+
+    .result-page {
+
+        width: 100%;
+
+        margin: 0;
+
+        padding:
+
+            15px
+            20px
+            35px;
+
+        min-height: 0;
+
+        border: 1px solid #9b6815;
+
+        box-shadow: none;
+
+        background: white;
+
+        color: #000;
+
+    }
+
+
+    .title-box,
+    .prediction-title h2 {
+
+        background: white;
+
+        border: 1px solid #9b6815;
+
+        box-shadow: none;
+
+    }
+
+
+    .title-box h1,
+    .prediction-title h2 {
+
+        color: #5a160d;
+
+    }
+
+
+    .personal-section,
+    .prediction-list {
+
+        background: white;
+
+        border: 1px solid #9b6815;
+
+        box-shadow: none;
+
+    }
+
+
+    .prediction-icon {
+
+        background: white;
+
+        border: 1px solid #9b6815;
+
+    }
+
+
+    .prediction-icon span {
+
+        color: #5a160d;
+
+    }
+
+
+    .official-seal {
+
+        position: absolute;
+
+        display: block;
+
+        right: 20px;
+
+        bottom: 25px;
+
+    }
+
+
+}

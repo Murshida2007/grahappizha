@@ -1,0 +1,246 @@
+/* ================= second.html additions ================= */
+/* Reuses all variables and base rules from first.css */
+
+.hero-sm{
+  margin:80px auto 0;
+  max-width:220px;
+}
+.hero-sm .zodiac-glow{
+  width:220px; height:220px;
+  left:50%; top:8%;
+  transform:translate(-50%,0);
+}
+.hero-sm .swami-photo{
+  max-width:210px;
+  border:2px solid rgba(255,204,77,.35);
+  box-shadow:0 0 30px rgba(255,170,40,.35);
+}
+
+/* ---- heading with flourishes (no bubble box) ---- */
+.talk-heading{
+  margin:18px auto 0;
+  max-width:460px;
+  padding:0 8px;
+}
+.talk-line{
+  margin:3px 0;
+  font-size:.94rem;
+  font-weight:800;
+  color:var(--gold);
+  line-height:1.6;
+  text-align:center;
+  text-shadow:0 1px 8px rgba(255,170,40,.25);
+}
+.flourish{
+  width:15px; height:11px;
+  display:inline-block;
+  vertical-align:middle;
+  opacity:.9;
+  margin:0 6px;
+}
+.flourish.flip{transform:scaleX(-1);}
+
+/* ---- form card ---- */
+.jathaka-form{
+  position:relative;
+  margin:22px auto 0;
+  max-width:420px;
+  border:1.5px solid var(--gold-deep);
+  border-radius:14px;
+  background:linear-gradient(180deg,#241007,#170a04);
+  padding:20px 22px 24px;
+  text-align:left;
+}
+.corner{
+  position:absolute;
+  width:16px; height:16px;
+  border:2px solid var(--gold);
+  opacity:.85;
+}
+.corner.tl{top:-1.5px; left:-1.5px; border-right:none; border-bottom:none; border-top-left-radius:10px;}
+.corner.tr{top:-1.5px; right:-1.5px; border-left:none; border-bottom:none; border-top-right-radius:10px;}
+.corner.bl{bottom:-1.5px; left:-1.5px; border-right:none; border-top:none; border-bottom-left-radius:10px;}
+.corner.br{bottom:-1.5px; right:-1.5px; border-left:none; border-top:none; border-bottom-right-radius:10px;}
+
+.field{
+  margin-bottom:14px;
+}
+.field:last-of-type{
+  margin-bottom:2px;
+}
+.field label{
+  display:flex;
+  align-items:center;
+  gap:7px;
+  font-size:.88rem;
+  font-weight:700;
+  color:var(--gold);
+  margin-bottom:6px;
+  letter-spacing:.2px;
+}
+.ficon{
+  width:18px; height:18px;
+  flex:0 0 auto;
+}
+
+.field input,
+.field select{
+  width:100%;
+  padding:11px 14px;
+  border-radius:9px;
+  border:1.3px solid var(--gold-deep);
+  background:rgba(30,12,6,.55);
+  color:var(--cream);
+  font-family:'Noto Sans Malayalam','Poppins',sans-serif;
+  font-size:.9rem;
+  outline:none;
+  appearance:none;
+  -webkit-appearance:none;
+  transition:border-color .15s ease, background .15s ease;
+}
+.field input::placeholder{
+  color:#a3846f;
+  opacity:.85;
+}
+.field input:focus,
+.field select:focus{
+  border-color:var(--gold);
+  background:rgba(60,24,10,.6);
+}
+
+/* input with icon inside (date field) */
+.input-icon-wrap{
+  position:relative;
+}
+.input-icon-wrap input{
+  padding-right:38px;
+}
+.input-icon-wrap .input-icon{
+  position:absolute;
+  right:12px; top:50%;
+  transform:translateY(-50%);
+  width:17px; height:17px;
+  pointer-events:none;
+}
+.field input[type="date"]{
+  color-scheme:dark;
+}
+.field input[type="date"]::-webkit-calendar-picker-indicator{
+  opacity:0;
+  position:absolute;
+  right:0; width:38px; height:100%;
+  cursor:pointer;
+}
+
+/* custom select arrow */
+.select-wrap select{
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--gold) 50%),
+    linear-gradient(135deg, var(--gold) 50%, transparent 50%);
+  background-position:
+    calc(100% - 18px) center,
+    calc(100% - 12px) center;
+  background-size:6px 6px, 6px 6px;
+  background-repeat:no-repeat;
+  padding-right:36px;
+}
+.field select option{
+  background:var(--panel);
+  color:var(--cream);
+}
+
+/* ---- bottom flourish row ---- */
+.bottom-deco{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  margin:20px auto 0;
+  max-width:280px;
+}
+.deco-swoosh{
+  width:20px; height:14px;
+  flex:0 0 auto;
+}
+.deco-swoosh.flip{transform:scaleX(-1);}
+.deco-line{
+  flex:1 1 auto;
+  height:1.5px;
+  background:linear-gradient(90deg, transparent, var(--gold-deep), transparent);
+  max-width:70px;
+}
+.kalasham-sm{
+  width:34px;
+  flex:0 0 auto;
+}
+
+.jathaka-form ~ .cta{
+  margin-top:22px;
+}
+
+footer.note{
+  text-align:center;
+}
+
+
+
+
+.camera-section {
+    text-align: center;
+    margin: 25px auto;
+    max-width: 350px;
+}
+
+.camera-btn {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    margin: 10px 0;
+    border: 2px solid #d4af37;
+    border-radius: 10px;
+    background: #2b1006;
+    color: #d4af37;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.camera-btn:hover {
+    background: #421a09;
+}
+
+.camera-box {
+    display: none;
+    width: 280px;
+    height: 280px;
+    margin: 15px auto;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 3px solid #d4af37;
+    background: #000;
+}
+
+#camera {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scaleX(-1);
+}
+
+.capture-btn {
+    display: none;
+}
+
+#photoCanvas {
+    display: none;
+}
+
+.photo-preview {
+    display: none;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #d4af37;
+    margin: 15px auto;
+}

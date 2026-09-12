@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="ml">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>ഷിബു സ്വാമി ജ്യോതിഷം | ജാതക ഫലം</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500;600;700;800&family=Noto+Sans+Malayalam:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="four.css">
+
+</head>
+
+
+<body>
+
+    <!-- BACKGROUND -->
+
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+
+    <!-- LEFT LAMP -->
+
+    <div class="hanging-lamp lamp-left">
+
+        <div class="lamp-chain"></div>
+        <div class="lamp-hook"></div>
+
+        <div class="lamp-body">
+
+            <div class="lamp-flame"></div>
+            <div class="lamp-top"></div>
+            <div class="lamp-bowl"></div>
+            <div class="lamp-base"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- RIGHT LAMP -->
+
+    <div class="hanging-lamp lamp-right">
+
+        <div class="lamp-chain"></div>
+        <div class="lamp-hook"></div>
+
+        <div class="lamp-body">
+
+            <div class="lamp-flame"></div>
+            <div class="lamp-top"></div>
+            <div class="lamp-bowl"></div>
+            <div class="lamp-base"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ==================================================
+         RESULT PAGE
+    =================================================== -->
+
+    <main class="result-page" id="horoscopeResult">
+
+
+        <!-- TOP DECORATION -->
+
+        <div class="top-rods">
+
+            <div class="top-rod"></div>
+
+            <div class="top-star">✦</div>
+
+            <div class="top-rod"></div>
+
+        </div>
+
+
+        <!-- =================================================
+             SWAMI + ZODIAC
+        ================================================== -->
+
+        <section class="swami-section">
+
+            <div class="zodiac-chart">
+
+                <img
+                    src="chart.jpeg"
+                    class="chart-image"
+                    
+                >
+
+            </div>
+
+
+            <div class="swami-glow"></div>
+
+
+            <div class="swami-round">
+
+                <div class="swami-round-inner">
+
+                    <img
+                        src="swami.jpg"
+                        alt="ഷിബു സ്വാമി"
+                        class="swami-image"
+                    >
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             BRAND TITLE
+        ================================================== -->
+
+        <section class="brand-title">
+
+            <div class="title-decoration left-decoration">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </div>
+
+
+            <div class="title-box">
+
+                <h1>
+                    ഷിബു സ്വാമി ജ്യോതിഷം
+                </h1>
+
+            </div>
+
+
+            <div class="title-decoration right-decoration">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             PERSONAL INFORMATION
+        ================================================== -->
+
+        <section class="personal-section">
+
+            <h2 class="section-heading">
+                നിങ്ങളുടെ വിവരങ്ങൾ
+            </h2>
+
+
+            <div class="personal-content">
+
+
+                <div class="personal-details">
+
+
+                    <div class="detail-row">
+
+                        <span class="detail-label">
+                            പേര്
+                        </span>
+
+                        <span class="colon">
+                            :
+                        </span>
+
+                        <strong id="result-name">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-row">
+
+                        <span class="detail-label">
+                            നക്ഷത്രം
+                        </span>
+
+                        <span class="colon">
+                            :
+                        </span>
+
+                        <strong id="result-nakshatram">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-row">
+
+                        <span class="detail-label">
+                            ജനന തിയതി
+                        </span>
+
+                        <span class="colon">
+                            :
+                        </span>
+
+                        <strong id="result-dob">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-row">
+
+                        <span class="detail-label">
+                            ജനന സമയം
+                        </span>
+
+                        <span class="colon">
+                            :
+                        </span>
+
+                        <strong id="result-birthtime">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="detail-row">
+
+                        <span class="detail-label">
+                            പ്രതിസന്ധി
+                        </span>
+
+                        <span class="colon">
+                            :
+                        </span>
+
+                        <strong id="result-crisis">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- CAPTURED PHOTO -->
+
+                <div class="profile-wrapper">
+
+                    <div class="profile-ring">
+
+                        <img
+                            id="result-photo"
+                            src=""
+                            alt="നിങ്ങളുടെ ഫോട്ടോ"
+                        >
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- DIVIDER -->
+
+        <div class="ornamental-divider">
+
+            <span></span>
+
+            <b>✦</b>
+
+            <span></span>
+
+        </div>
+
+
+        <!-- =================================================
+             PREDICTION TITLE
+        ================================================== -->
+
+        <section class="prediction-title">
+
+            <h2>
+                നിങ്ങൾക്കുള്ള ജ്യോതിഷ നിർദ്ദേശങ്ങൾ
+            </h2>
+
+        </section>
+
+
+        <!-- =================================================
+             PREDICTIONS
+        ================================================== -->
+
+        <section class="prediction-list">
+
+
+            <!-- CAREER -->
+
+            <article class="prediction-row">
+
+                <div class="prediction-icon">
+                    <span>💼</span>
+                </div>
+
+                <div class="prediction-content">
+
+                    <h3>
+                        കരിയർ
+                    </h3>
+
+                    <p id="career-text">
+                        —
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- MARRIAGE -->
+
+            <article class="prediction-row">
+
+                <div class="prediction-icon">
+                    <span>♡</span>
+                </div>
+
+                <div class="prediction-content">
+
+                    <h3>
+                        വിവാഹം
+                    </h3>
+
+                    <p id="marriage-text">
+                        —
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- HEALTH -->
+
+            <article class="prediction-row">
+
+                <div class="prediction-icon">
+                    <span>✚</span>
+                </div>
+
+                <div class="prediction-content">
+
+                    <h3>
+                        ആയുസ്സും ആരോഗ്യവും
+                    </h3>
+
+                    <p id="health-text">
+                        —
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- NEXT WEEK -->
+
+            <article class="prediction-row">
+
+                <div class="prediction-icon">
+                    <span>▣</span>
+                </div>
+
+                <div class="prediction-content">
+
+                    <h3>
+                        അടുത്ത ആഴ്ച
+                    </h3>
+
+                    <p id="week-text">
+                        —
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- REMEDY -->
+
+            <article class="prediction-row">
+
+                <div class="prediction-icon">
+                    <span>♧</span>
+                </div>
+
+                <div class="prediction-content">
+
+                    <h3>
+                        പരിഹാരം
+                    </h3>
+
+                    <p id="remedy-text">
+                        —
+                    </p>
+
+                </div>
+
+            </article>
+
+
+        </section>
+
+
+        <!-- =================================================
+             OFFICIAL SEAL
+        ================================================== -->
+
+        <div class="official-seal">
+
+            <img
+                src="seal1.png"
+                alt="Shibu Swami Seal"
+            >
+
+        </div>
+
+
+        <!-- BOTTOM DECORATION -->
+
+        <div class="bottom-decoration">
+
+            <span></span>
+
+            <b>✦</b>
+
+            <span></span>
+
+        </div>
+
+
+        <!-- =================================================
+             ACTION BUTTONS
+        ================================================== -->
+
+        <div class="download-area">
+
+
+            <!-- DOWNLOAD / BACK BUTTON -->
+
+            <button
+                type="button"
+                id="downloadHoroscope"
+                class="download-btn"
+                
+            >
+
+                <span>📥</span>
+
+                Download Horoscope
+
+            </button>
+
+
+            <!-- TRY AGAIN BUTTON -->
+
+            <button
+                type="button"
+                id="tryAgain"
+                class="try-again-btn"
+            >
+
+                <span>🔄</span>
+
+                Try Again
+
+            </button>
+
+
+        </div>
+
+
+        <!-- =================================================
+             TRY AGAIN AUDIO
+        ================================================== -->
+
+        <audio
+            id="tryAgainAudio"
+            preload="auto"
+        >
+
+            <source
+                src="audio/try.mpeg"
+                type="audio/mpeg"
+            >
+
+        </audio>
+
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="four.js"></script>
+
+
+</body>
+
+</html>
