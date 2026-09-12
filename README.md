@@ -202,7 +202,31 @@ git clone https://github.com/your-username/grahappizha.com.git
 2.<img width="1600" height="707" alt="image" src="https://github.com/user-attachments/assets/8f6ee910-f3a1-49c5-8c92-5826c5580a3f" />
 3.<img width="1600" height="716" alt="image" src="https://github.com/user-attachments/assets/f298fff8-f9a1-478d-bbc7-e2c9b9e6e62c" />
 
-# video#
+# video
+https://github.com/Murshida2007/grahappizha.com/blob/main/WhatsApp%20Video%202026-09-12%20at%209.04.02%20AM.mp4
+
+### 👥 Team Contributions
+
+### Fathima Rabeeha M
+
+* Designed the website layout and user interface.
+
+* Developed the homepage and user details form.
+
+* Added camera/photo capture functionality.
+
+* Worked on styling, colors, and responsive design.
+
+### Murshida KK
+
+* Developed the horoscope chart and result pages.
+
+* Implemented JavaScript functionality and local storage.
+
+* Added horoscope result display and PDF printing.
+
+* Tested the website and fixed layout and functionality issues.
+*
 
 
 
