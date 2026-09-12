@@ -30,12 +30,10 @@ A fun, interactive Malayalam astrology website that allows users to submit their
 
 ## 👥 Team Members
 
-- **Team Lead:** Fathima Rabeeha M — [College Name]
-- **Member 2:** Murshida KK — [College Name]
+- **Team Lead:** Fathima Rabeeha M — [EMEA College Of Arts And Science]
+- **Member 2:** Murshida KK — [EMEA College Of Arts And Science]
 
-> Add college names and additional team members if required.
 
----
 
 ## 📝 Project Description
 
@@ -203,6 +201,10 @@ git clone https://github.com/your-username/grahappizha.com.git
 1.<img width="1600" height="698" alt="image" src="https://github.com/user-attachments/assets/5d943771-040d-4883-9ece-0f9ed157c2d8" />
 2.<img width="1600" height="707" alt="image" src="https://github.com/user-attachments/assets/8f6ee910-f3a1-49c5-8c92-5826c5580a3f" />
 3.<img width="1600" height="716" alt="image" src="https://github.com/user-attachments/assets/f298fff8-f9a1-478d-bbc7-e2c9b9e6e62c" />
+
+# video#
+
+
 
 
 
