@@ -451,7 +451,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (!tryAgainAudio) {
 
                     window.location.href =
-                        "first.html";
+                        "index.html";
 
                     return;
 
@@ -476,7 +476,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     function () {
 
                         window.location.href =
-                            "first.html";
+                            "index.html";
 
                     };
 
@@ -493,7 +493,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         );
 
                         window.location.href =
-                            "first.html";
+                            "index.html";
 
                     };
 
@@ -511,7 +511,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         );
 
                         window.location.href =
-                            "first.html";
+                            "index.html";
 
                     }
                 );
@@ -550,7 +550,7 @@ document.addEventListener("DOMContentLoaded", function () {
     );
 
     console.log(
-        "Try Again button connected to first.html."
+        "Try Again button connected to index.html."
     );
 
 });

@@ -151,7 +151,7 @@ Try Again or Return to Start
 ```text
 grahappizha.com/
 │
-├── first.html
+├── index.html
 ├── second.html
 ├── third.html
 ├── four.html
@@ -194,8 +194,8 @@ git clone https://github.com/your-username/grahappizha.com.git
 2. Open the Project Foldercd grahappizha.com
 3.Open the folder in Visual Studio Code.
 4.Install the Live Server extension.
-5.Open first.html.
-6.Right-click → Open with Live Server.Or run:python -m http.server 5500Openhttp://localhost:5500/first.html
+5.Open index.html.
+6.Right-click → Open with Live Server.Or run:python -m http.server 5500Openhttp://localhost:5500/index.html
 
 # screenshots
 1.<img width="1600" height="698" alt="image" src="https://github.com/user-attachments/assets/5d943771-040d-4883-9ece-0f9ed157c2d8" />
