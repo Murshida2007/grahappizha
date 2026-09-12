@@ -5,7 +5,6 @@
 
 document.addEventListener("DOMContentLoaded", function () {
 
-
     /* =====================================================
        STORAGE
     ===================================================== */
@@ -122,7 +121,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         "കുളിക്കാൻ പോകുമ്പോൾ ഫോൺ പുറത്ത് വെക്കുക; ഗ്രഹങ്ങൾ നിങ്ങളുടെ ശുചിത്വം കണ്ട് അത്ഭുതപ്പെടട്ടെ.",
 
-        "മാസത്തിൽ ഒരു ദിവസമെങ്കിലും റീൽസ് ഷെയർ ചെയ്യാതെ അടുത്ത സുഹൃത്തിന് സ്വസ്ഥത നൽകുക.",
+        "മാസത്തിൽ ഒരു ദിവസമെങ്കിലും റീൽസ് ഷെയർ ചെയ്യാതെ അടുത്ത സുഹത്തിന് സ്വസ്ഥത നൽകുക.",
 
         "ബാങ്ക് അക്കൗണ്ട് ബാലൻസ് ദിവസത്തിൽ 4 തവണ ചെക്ക് ചെയ്യുന്ന ദുശ്ശീലം നിർത്തി വെറും 2 തവണയാക്കുക."
 
@@ -153,7 +152,6 @@ document.addEventListener("DOMContentLoaded", function () {
     ===================================================== */
 
     let userData = {};
-
 
     try {
 
@@ -258,24 +256,20 @@ document.addEventListener("DOMContentLoaded", function () {
         userData.name
     );
 
-
     setText(
         "result-nakshatram",
         userData.nakshatram
     );
-
 
     setText(
         "result-dob",
         formatDate(userData.dob)
     );
 
-
     setText(
         "result-birthtime",
         userData.birthtime
     );
-
 
     setText(
         "result-crisis",
@@ -290,10 +284,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const profileImage =
         document.getElementById("result-photo");
 
-
     const savedPhoto =
         localStorage.getItem(PHOTO_KEY);
-
 
     if (
         profileImage &&
@@ -323,24 +315,20 @@ document.addEventListener("DOMContentLoaded", function () {
         randomItem(CAREER_ROASTS)
     );
 
-
     setText(
         "marriage-text",
         randomItem(MARRIAGE_ROASTS)
     );
-
 
     setText(
         "health-text",
         randomItem(AYUSSU_ROASTS)
     );
 
-
     setText(
         "week-text",
         randomItem(NEXTWEEK_ROASTS)
     );
-
 
     setText(
         "remedy-text",
@@ -357,7 +345,6 @@ document.addEventListener("DOMContentLoaded", function () {
             ".prediction-row"
         );
 
-
     predictionRows.forEach(
         function (row, index) {
 
@@ -368,7 +355,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
             row.style.transition =
                 "opacity .45s ease, transform .45s ease";
-
 
             setTimeout(
                 function () {
@@ -395,7 +381,6 @@ document.addEventListener("DOMContentLoaded", function () {
             "downloadHoroscope"
         );
 
-
     if (downloadButton) {
 
         downloadButton.addEventListener(
@@ -416,9 +401,10 @@ document.addEventListener("DOMContentLoaded", function () {
     ===================================================== */
 
     const tryAgainButton =
-        document.getElementById(
-            "tryAgain"
-        );
+        document.getElementById("tryAgain");
+
+    const tryAgainAudio =
+        document.getElementById("tryAgainAudio");
 
 
     if (tryAgainButton) {
@@ -427,39 +413,16 @@ document.addEventListener("DOMContentLoaded", function () {
             "click",
             function () {
 
-                /*
-                 * Prevent multiple clicks
-                 */
+                /* =========================================
+                   DISABLE BUTTON
+                ========================================= */
 
                 tryAgainButton.disabled = true;
 
 
-                /*
-                 * Play Try Again audio
-                 */
-
-                const tryAgainSound =
-                    new Audio("try.mpeg");
-
-
-                tryAgainSound.volume = 5.0;
-
-
-                tryAgainSound.play().catch(
-                    function (error) {
-
-                        console.log(
-                            "Audio could not play:",
-                            error
-                        );
-
-                    }
-                );
-
-
-                /*
-                 * Clear previous horoscope data
-                 */
+                /* =========================================
+                   CLEAR OLD DATA
+                ========================================= */
 
                 try {
 
@@ -481,20 +444,76 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
 
 
-                /*
-                 * Wait before redirecting
-                 *
-                 * 1500 = 1.5 seconds
-                 */
+                /* =========================================
+                   AUDIO NOT FOUND
+                ========================================= */
 
-                setTimeout(
+                if (!tryAgainAudio) {
+
+                    window.location.href =
+                        "first.html";
+
+                    return;
+
+                }
+
+
+                /* =========================================
+                   RESET AUDIO
+                ========================================= */
+
+                tryAgainAudio.currentTime = 0;
+
+                tryAgainAudio.volume = 1.0;
+
+
+                /* =========================================
+                   AUDIO FINISHED
+                   0:02 → FIRST.HTML
+                ========================================= */
+
+                tryAgainAudio.onended =
                     function () {
 
                         window.location.href =
                             "first.html";
 
-                    },
-                    1000
+                    };
+
+
+                /* =========================================
+                   AUDIO ERROR
+                ========================================= */
+
+                tryAgainAudio.onerror =
+                    function () {
+
+                        console.error(
+                            "Could not load try.mpeg"
+                        );
+
+                        window.location.href =
+                            "first.html";
+
+                    };
+
+
+                /* =========================================
+                   PLAY AUDIO
+                ========================================= */
+
+                tryAgainAudio.play().catch(
+                    function (error) {
+
+                        console.error(
+                            "Audio could not play:",
+                            error
+                        );
+
+                        window.location.href =
+                            "first.html";
+
+                    }
                 );
 
             }
