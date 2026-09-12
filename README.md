@@ -175,15 +175,6 @@ grahappizha.com/
 ├── audio/
 │   └── try.mpeg
 |   |__swami.mpeg
-video/
-demo.mp4
-images/
-screenshot1
-screenshot2
-screenshot3
-screenshot4
-
-
 │
 └── README.md
 
@@ -192,38 +183,27 @@ screenshot4
 ## 1. Clone the Repository
 
 ```bash
-git clone https://murshida2007/grahappizha.com.git
+git clone https://github.com/your-username/grahappizha.com.git
 
 # 🚀 Installation and Running Instructions
 
 ## 1. Clone the Repository
 
 ```bash
-git clone https://github.com/murshida2007/grahappizha.com.git
+git clone https://github.com/your-username/grahappizha.com.git
 2. Open the Project Foldercd grahappizha.com
 3.Open the folder in Visual Studio Code.
 4.Install the Live Server extension.
 5.Open first.html.
 6.Right-click → Open with Live Server.Or run:python -m http.server 5500Openhttp://localhost:5500/first.html
 
-## Screenshots
-
-### Home Page
-![Home Page](images/screenshot1.png)
-
-### home Page
-![User Details](images/screenshot2.png)
-
-### Astrology entering
-![Astrology Result](images/screenshot3.png)
-
-### Astrology Result
-![Astrology Result](images/screenshot3.png)
-
+# screenshots
+1.<img width="1600" height="698" alt="image" src="https://github.com/user-attachments/assets/5d943771-040d-4883-9ece-0f9ed157c2d8" />
+2.<img width="1600" height="707" alt="image" src="https://github.com/user-attachments/assets/8f6ee910-f3a1-49c5-8c92-5826c5580a3f" />
+3.<img width="1600" height="716" alt="image" src="https://github.com/user-attachments/assets/f298fff8-f9a1-478d-bbc7-e2c9b9e6e62c" />
 
 # video
-###Project demo
-![watch demo video](video/demo.mp4)
+https://github.com/Murshida2007/grahappizha.com/blob/main/WhatsApp%20Video%202026-09-12%20at%209.04.02%20AM.mp4
 
 ### 👥 Team Contributions
 
